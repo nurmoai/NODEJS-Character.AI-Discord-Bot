@@ -1,9 +1,11 @@
 const { Client, GatewayIntentBits} = require('discord.js')
 const { updateCommands } = require('./updateCommands.js')
 const fs = require('fs')
+
+require('dotenv').config();
+
 const TOKEN = process.env['TOKEN']
 const CLIENT_ID = process.env['CLIENT_ID']
-
 
 const client = new Client({ intents: [ 
   GatewayIntentBits.DirectMessages,
